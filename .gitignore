@@ -1,0 +1,53 @@
+# ============================================
+# 1. THE "FORBIDDEN" VAULT (Secrets & Keys)
+# ============================================
+# Never, ever let these reach the cloud.
+*.pem
+*.key
+*.pub
+id_rsa
+id_ed25519
+*.env
+*.env.local
+.netrc
+credentials
+.aws/
+.ssh/
+
+# ============================================
+# 2. THE "LOCAL OVERRIDE" PATTERN
+# ============================================
+# This allows you to have machine-specific settings 
+# (like your work email or a secret API key) that stay local.
+*.local
+local.sh
+local.bash
+.bash_history
+.python_history
+
+# ============================================
+# 3. THE "GHOST FILES" (OS & IDE Trash)
+# ============================================
+# General OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# IDE specific junk (VS Code & Cursor)
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.cursor/
+*.code-workspace
+
+# ============================================
+# 4. THE "HEAVY LIFTING" (Binaries & Logs)
+# ============================================
+node_modules/
+dist/
+build/
+*.log
+*.tmp
+*.bak
+*.swp
