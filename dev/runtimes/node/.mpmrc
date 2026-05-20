@@ -1,0 +1,8 @@
+# Enforce deterministic package resolution
+save-exact=true
+
+# Silence CLI bloat and telemetry
+fund=false
+audit=false
+loglevel=error
+update-notifier=false

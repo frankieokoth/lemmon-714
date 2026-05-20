@@ -1,0 +1,7 @@
+numpy
+pandas
+requests
+python-dotenv
+pytest
+black
+flake8
