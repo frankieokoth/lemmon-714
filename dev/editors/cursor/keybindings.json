@@ -1,0 +1,18 @@
+[
+    {
+        "key": "ctrl+k",
+        "command": "cursorai.action.generateInEditor"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "cursorai.action.chat"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    }
+]

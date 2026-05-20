@@ -1,0 +1,13 @@
+{
+    "editor.fontFamily": "'JetBrains Mono', 'Fira Code', Consolas, monospace",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": true,
+    "editor.wordWrap": "on",
+    "editor.renderWhitespace": "boundary",
+    "files.trimTrailingWhitespace": true,
+    "workbench.colorTheme": "Default Dark Modern",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "cursor.aipane.position": "right",
+    "cursor.general.disableTelemetry": true
+}
