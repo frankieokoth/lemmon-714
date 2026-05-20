@@ -1,0 +1,17 @@
+{
+    "editor.fontFamily": "'JetBrains Mono', 'Fira Code', Consolas, monospace",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.tabSize": 4,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Default Dark Modern",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "debug.toolBarLocation": "docked",
+    "mergeEditor.showStandardControl": true
+}

@@ -29,3 +29,17 @@ Desktop.ini
 .env
 .env.local
 .env.*.local
+
+# -----------------------------------
+# THE RED ZONE: Cryptographic & Auth
+# -----------------------------------
+.ssh/
+.gnupg/
+.aws/
+.npmrc
+.docker/config.json
+.bash_history
+id_rsa*
+id_ed25519*
+*.pem
+*.ppk
