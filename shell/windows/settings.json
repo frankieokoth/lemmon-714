@@ -1,0 +1,34 @@
+{
+    "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}", 
+    "profiles": {
+        "defaults": {
+            "font": {
+                "face": "JetBrains Mono",
+                "size": 11,
+                "weight": "medium"
+            },
+            "colorScheme": "Lemmon-714",
+            "cursorShape": "filledBox",
+            "padding": "8",
+            "opacity": 95,
+            "useAcrylic": true
+        }
+    },
+    "schemes": [
+        {
+            "name": "Lemmon-714",
+            "background": "#0D1117",
+            "foreground": "#C9D1D9",
+            "cursorColor": "#58A6FF",
+            "selectionBackground": "#388BFD",
+            "black": "#484F58",
+            "blue": "#58A6FF",
+            "cyan": "#39C5CF",
+            "green": "#3FB950",
+            "purple": "#BC8CFF",
+            "red": "#FF7B72",
+            "white": "#B1BAC4",
+            "yellow": "#D2A8FF"
+        }
+    ]
+}
