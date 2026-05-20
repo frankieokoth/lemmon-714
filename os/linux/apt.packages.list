@@ -1,0 +1,43 @@
+# --- 1. CORE ARCHITECTURE & DEPLOYMENT ---
+stow
+curl
+wget
+git
+unzip
+zip
+tar
+
+# --- 2. RUNTIMES & COMPILATION ---
+build-essential
+make
+cmake
+gdb
+python3-pip
+python3-venv
+nodejs
+npm
+
+# --- 3. INFRASTRUCTURE & CLOUD ---
+docker-ce
+docker-ce-cli
+containerd.io
+docker-buildx-plugin
+docker-compose-plugin
+google-cloud-cli
+gnupg
+ca-certificates
+apt-transport-https
+
+# --- 4. TERMINAL DEVEX & NAVIGATION ---
+neovim
+ripgrep
+fd-find
+tree
+screen
+terminator
+
+# --- 5. SYSTEM MONITORING & AESTHETICS ---
+htop
+fastfetch
+cmatrix
+lolcat
