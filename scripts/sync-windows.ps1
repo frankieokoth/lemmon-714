@@ -21,14 +21,13 @@ if (Test-Path $RegFile) {
 
 # 3. Symlink PowerShell Profile
 $ProfileRepoPath = Join-Path $PSScriptRoot "..\shell\powershell\Microsoft.PowerShell_profile.ps1"
-$ProfileDestDir  = Secure-String # Standard Windows PowerShell Directory
 $ProfileDestDir  = "$HOME\Documents\WindowsPowerShell"
 if (-not (Test-Path $ProfileDestDir)) { New-Item -ItemType Directory -Path $ProfileDestDir -Force | Out-Null }
 $ProfileDestFile = Join-Path $ProfileDestDir "Microsoft.PowerShell_profile.ps1"
 
 Write-Host "=> Linking PowerShell host nervous system..." -ForegroundColor Green
 if (Test-Path $ProfileDestFile) { Remove-Item $ProfileDestFile -Force }
-New-Item -ItemType SymbolLink -Path $ProfileDestFile -Value $ProfileRepoPath -Force | Out-Null
+New-Item -ItemType SymbolicLink -Path $ProfileDestFile -Target $ProfileRepoPath -Force | Out-Null
 
 Write-Host "==========================================" -ForegroundColor Cyan
 Write-Host "Windows Sync Complete! Host is now configured." -ForegroundColor Cyan

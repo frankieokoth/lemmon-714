@@ -23,7 +23,7 @@ alias gp="git push"
 
 # The Lemmon-714 Engine Overrides (Makefile Automation)
 # Automatically looks for the master Makefile in your platform repository path
-alias l714="cd ~/dev/lemmon-714"
-alias sys-doctor="make -C ~/dev/lemmon-714 doctor"
-alias sys-flush="make -C ~/dev/lemmon-714 flush"
-alias sys-deploy="make -C ~/dev/lemmon-714 install"
+alias l714="cd ~/repos/lemmon-714"
+alias sys-doctor="make -C ~/repos/lemmon-714 doctor"
+alias sys-flush="make -C ~/repos/lemmon-714 flush"
+alias sys-deploy="make -C ~/repos/lemmon-714 install"
