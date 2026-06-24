@@ -22,6 +22,26 @@ stow --dir="$REPO_DIR/shell" --target="$HOME" bash
 echo "=> Syncing version control configurations..."
 stow --dir="$REPO_DIR/dev/vcs" --target="$HOME" git
 
+# 4. Map Node.js Runtime Configuration (.npmrc)
+echo "=> Syncing Node.js runtime configuration..."
+ln -sf "$REPO_DIR/dev/runtimes/node/.npmrc" "$HOME/.npmrc"
+
+# 5. Map Python Runtime Configuration (pip.conf)
+echo "=> Syncing Python runtime configuration..."
+mkdir -p "$HOME/.config/pip"
+ln -sf "$REPO_DIR/dev/runtimes/python/pip.conf" "$HOME/.config/pip/pip.conf"
+
+# 6. Map Editor Configurations (VS Code & Cursor for WSL remote)
+echo "=> Syncing editor configurations..."
+if [ -d "$HOME/.vscode-server" ]; then
+    mkdir -p "$HOME/.vscode-server/data/Machine"
+    ln -sf "$REPO_DIR/dev/editors/vscode/settings.json" "$HOME/.vscode-server/data/Machine/settings.json"
+fi
+if [ -d "$HOME/.cursor-server" ]; then
+    mkdir -p "$HOME/.cursor-server/data/Machine"
+    ln -sf "$REPO_DIR/dev/editors/cursor/settings.json" "$HOME/.cursor-server/data/Machine/settings.json"
+fi
+
 echo "=========================================="
 echo "Deployment Complete! Nervous system connected."
 echo "=========================================="

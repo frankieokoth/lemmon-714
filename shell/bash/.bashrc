@@ -23,6 +23,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Source local overrides (machine-specific, not tracked by version control)
+if [ -f ~/.bashrc_local ]; then
+    . ~/.bashrc_local
+fi
+
 # Initialize the Starship Prompt Interface
 if command -v starship &> /dev/null; then
     eval "$(starship init bash)"
