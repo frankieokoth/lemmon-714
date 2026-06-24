@@ -36,7 +36,6 @@ Desktop.ini
 .ssh/
 .gnupg/
 .aws/
-.npmrc
 .docker/config.json
 .bash_history
 id_rsa*

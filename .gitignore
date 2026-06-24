@@ -4,7 +4,6 @@
 # Never, ever let these reach the cloud.
 *.pem
 *.key
-*.pub
 id_rsa
 id_ed25519
 *.env

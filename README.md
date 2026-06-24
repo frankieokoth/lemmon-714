@@ -40,7 +40,7 @@ lemmon-714
 ├── os/              # OS-level configuration
 │   ├── linux/       # apt packages, bootstrap script
 │   └── windows/     # winget packages, PowerShell bootstrap
-├── scripts/         # Internal automation (install, bootstrap, doctor)
+├── scripts/         # Internal automation (install, doctor, repair)
 └── Makefile         # Primary entry point
 ```
 
@@ -65,15 +65,20 @@ sudo apt install git make stow
 make bootstrap
 ```
 Performs initial system setup:
-* Installs required system packages
-* Applies configuration via GNU Stow
-* Initializes development environment
+* Installs packages from `os/linux/apt.packages.list`
+* Installs Starship prompt
+* Enables True Color support
 
 ### Install (configs only)
 ```sh
 make install
 ```
-Deploys symlinks to the home directory.
+Deploys symlinks to the home directory:
+* XDG configs (starship, fastfetch, tmux) → `~/.config/`
+* Shell configs (.bashrc, .bash_aliases, .profile) → `~/`
+* Git configs (.gitconfig, .gitignore_global) → `~/`
+* Runtime configs (.npmrc, pip.conf) → `~/`, `~/.config/pip/`
+* Editor settings (VS Code, Cursor) → WSL server paths
 
 ### Doctor (environment check)
 ```sh
@@ -87,19 +92,20 @@ Validates system state:
 ## OS Configuration
 
 ### Linux (WSL2)
-* **Package list:** `os/linux/apt-packages.list`
+* **Package list:** `os/linux/apt.packages.list`
 * **Bootstrap script:** `os/linux/bootstrap.sh`
 
 ### Windows
-* **Application list:** `os/windows/winget-export.json`
-* **Bootstrap script:** `os/windows/bootstrap.ps1`
+* **Bootstrap script:** `os/windows/bootstrap.ps1` (winget package installs)
+* **Symlink engine:** `os/windows/sync.ps1`
 
 ## Makefile Commands
 
-* `make bootstrap` → Full environment setup
-* `make install` → Apply configuration only
-* `make doctor` → Validate environment
-* `make repair` → Reset development environment state
+* `make bootstrap` → Full environment setup (packages + starship)
+* `make install` → Deploy all configuration symlinks
+* `make doctor` → Validate environment integrity
+* `make repair` → Reset editor servers and dead IPC sockets
+* `make flush` → Alias for `repair`
 * `make backup-windows` → Export Windows app inventory
 
 ## Verification
